@@ -16,6 +16,6 @@ There's an accompanying `dual_guided_versatile.ipynb` notebook file that provide
 
 ## Note on Memory Management:
 
-During the development of this project, I leveraged `float16` precision and cast models to `.half()` to counteract RAM limitations. Despite these precautions, training the model directly faced challenges due to its extensive parameter set. Specifically, while the model's forward pass and loss calculations worked without hitches, the `loss.backward()` operation couldn't be executed due to RAM overheads.
+During the development of this project, I leveraged `float16` precision and cast models to `.half()` to counteract RAM limitations. Despite these precautions, training the model directly faced challenges due to its extensive parameter set. Specifically, while the model's forward pass and loss calculations worked without hitches, the `optimizer.step()` operation couldn't be executed due to RAM overheads.
 
 However, the sampling function was successfully implemented and tested using pretrained weights.
